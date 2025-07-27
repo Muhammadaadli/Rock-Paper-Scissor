@@ -1,0 +1,129 @@
+body {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.game-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.choice-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  flex: 1;
+  min-width: 120px;
+  max-width: 150px;
+}
+
+.choice-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.choice-btn:active {
+  transform: translateY(0);
+}
+
+.result-display p {
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+.result {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #e74c3c; /* Default for loss */
+}
+
+.result.win {
+  color: #27ae60;
+}
+
+.result.draw {
+  color: #f39c12;
+}
+
+.score-board {
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.reset-btn {
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+  background-color: #7f8c8d;
+}
+
+@media (max-width: 600px) {
+  .game-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .choice-btn {
+    font-size: 1em;
+    padding: 12px 20px;
+    min-width: unset;
+    flex: none;
+    width: 100%;
+  }
+
+  .choices {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
